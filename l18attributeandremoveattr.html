@@ -75,6 +75,35 @@
 
                 });
             });
+              
+                //removeAttr
+            $('#rmattr').click(function(){
+             $('h1').removeAttr('id class');
+            });
+
+  //----------------------------------
+   //CLASS  single permeter value 2ku ya
+   //$(selector).addClass();
+  $('#textcnt').click(function(){
+    // $('h1').addClass("text-center");
+    $('h1').addClass("text-center underline");
+  });
+
+  //removeClass();
+  $('#rmclass').click(function(){
+    //   $('h1').removeClass('text-light');
+    $('h1').removeClass('text-light bg-info');
+  });
+
+  //hasClass
+   $('#hasclass').click(function(){
+       window.alert($('h1').hasClass('text-center'));
+   });
+
+   //toggleClass();
+   $('#togclass').click(function(){
+     $('h1').toggleClass('text-center underline');
+   });
 
 
           });
