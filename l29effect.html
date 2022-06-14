@@ -49,6 +49,24 @@
 
     <div class="control">
       <button type="button" id="hidebtn">Hide Btn</button>
+       <button type="button" id="showbtn">Show Btn</button>
+      <button type="button" id="togbtn">toogle Btn</button>
+      <button type="button" id="fdoutbtn">Fadeout Btn</button>
+      <button type="button" id="fdinbtn">Fadein Btn</button>
+      <button type="button" id="fdtgbtn">FadeToggle Btn</button>
+      <button type="button" id="fdtobtn">FadeTo Btn</button>
+      <button type="button" id="sldupbtn">SlideUp Btn</button>
+      <button type="button" id="slddownbtn">SlideDown Btn</button>
+      <button type="button" id="sldtogbtn">SlideToggle Btn</button>
+      <button type="button" id="anibtn">Animate Btn</button>
+      <button type="button" id="dlybtn">Delay Btn</button>
+
+      <button type="button" id="clickmebtn">Click Me Btn</button>
+      <button type="button" id="stopbtn">Stop Btn</button>
+      <button type="button" id="stoptruebtn">stop(true) Btn</button>
+      <button type="button" id="finishbtn">Finish Btn</button>
+      <button type="button" id="dqbtn">Dequeue</button>
+      <button type="button" id="cqbtn">Clearqueue</button>
     </div>
 
     
@@ -89,6 +107,316 @@
                 $('.square4,.square5').hide(2000);
             });
         });
+    });
+        
+         //show
+    //$('selector').show()
+
+    $('#showbtn').click(function(){
+
+    //  $('.square1').show();
+    // $('.square1.,.square3').show(1000);
+      // $('.box').even().show();
+        // $('.box').odd().show();
+
+          // 1s = 1000ms
+        // $('.square1').show(1000);
+        // $('.square1').show('slow');
+
+        $('.square1').show(1000,function(){
+            $('.square2,.square3').show(1500,function(){
+                $('.square4,.square5').show(2000);
+            });
+        });
+
+    });
+
+    $('#togbtn').click(function(){
+
+         //  $('.square1').toogle();
+    // $('.square1.,.square3').toogle(1000);
+      // $('.box').even().toogle();
+        // $('.box').odd().toogle();
+
+          // 1s = 1000ms
+        // $('.square1').toogle(1000);
+        // $('.square1').toogle('slow');
+
+        $('.square1').toogle(1000,function(){
+            $('.square2,.square3').toogle(1500,function(){
+                $('.square4,.square5').toogle(2000);
+            });
+        });
+
+    });
+
+    $('#fdoutbtn').click(function(){
+
+//  $('.square1').fadeOut();
+// $('.square1.,.square3').fadeOut(1000);
+// $('.box').even().fadeOut();
+// $('.box').odd().fadeOut();
+
+ // 1s = 1000ms
+// $('.square1').fadeOut(1000);
+// $('.square1').fadeOut('slow');
+
+    $('.square1').fadeOut(1000,function(){
+        $('.square2,.square3').fadeOut(1500,function(){
+            $('.square4,.square5').fadeOut(2000);
+        });
+    });
+
+});
+
+$('#fdinbtn').click(function(){
+
+//  $('.square1').fadeIn();
+// $('.square1.,.square3').fadeIn(1000);
+// $('.box').even().fadeIn();
+// $('.box').odd().fadeIn();
+
+ // 1s = 1000ms
+// $('.square1').fadeIn(1000);
+// $('.square1').fadeIn('slow');
+
+    $('.square1').fadeIn(1000,function(){
+        $('.square2,.square3').fadeIn(1500,function(){
+            $('.square4,.square5').fadeIn(2000);
+        });
+    });
+
+});
+
+   
+   $('#fdtgbtn').click(function(){
+
+     //  $('.square1').fadeToggle();
+// $('.square1.,.square3').fadeToggle(1000);
+// $('.box').even().fadeToggle();
+// $('.box').odd().fadeToggle();
+
+ // 1s = 1000ms
+// $('.square1').fadeToggle(1000);
+// $('.square1').fadeToggle('slow');
+
+    $('.square1').fadeToggle(1000,function(){
+        $('.square2,.square3').fadeToggle(1500,function(){
+            $('.square4,.square5').fadeToggle(2000);
+        });
+    });
+
+   });
+
+   //fadeTo();
+   //$('selector').fadeT0(speed,opacity)
+   //$('selector').fadeT0(speed,opacity,callback)
+
+   $('#fdtobtn').click(function(){
+
+//  $('.square1').fadeTo(1000,0.5);
+// $('.square1.,.square3').fadeTo(1000,0.5);
+// $('.box').even().fadeTo(slow,0.5);
+// $('.box').odd().fadeTo(slow,0.5);
+
+// 1s = 1000ms
+// $('.square1').fadeTo(1000);
+// $('.square1').fadeTo('slow');
+
+$('.square1').fadeTo(1000,0.5,function(){
+   $('.square2,.square3').fadeTo(1500,0)
+ });
+});
+
+
+
+//--------------------------------------
+
+   //sliding effect
+   //slidingUp()
+     //$('selector').SlideUp(speed)
+   //$('selector').slideUp(speed,callback)
+
+
+
+   $('#sldupbtn').click(function(){
+
+//  $('.square1').slideUp(1000);
+// $('.square1.,.square3').slideUp(1000);
+// $('.box').even().slideUp(slow);
+// $('.box').odd().slideUp(slow);
+
+// 1s = 1000ms
+// $('.square1').slideUp(1000);
+// $('.square1').slideUp('slow');
+
+$('.square1').slideUp(1000,function(){
+   $('.square2,.square3').slideUp(1500)
+ });
+});
+
+  
+ //slidingDown()
+     //$('selector').SlideDown(speed)
+   //$('selector').slideDown(speed,callback)
+
+$('#slddownbtn').click(function(){
+
+//  $('.square1').slideDown(1000);
+// $('.square1.,.square3').slideDown(1000);
+// $('.box').even().slideDown(slow);
+// $('.box').odd().slideDown(slow);
+
+// 1s = 1000ms
+// $('.square1').slideDown(1000);
+// $('.square1').slideDown('slow');
+
+$('.square1').slideDown(1000,function(){
+   $('.square2,.square3').slideDown(1500)
+ });
+});
+
+
+   //slidingToggle()
+     //$('selector').SlideToggle(speed)
+   //$('selector').slideToggle(speed,callback)
+
+  $('#sldtogbtn').click(function(){
+
+    //  $('.square1').slideToggle(1000);
+// $('.square1.,.square3').slideToggle(1000);
+// $('.box').even().slideToggle(slow);
+// $('.box').odd().slideToggle(slow);
+
+// 1s = 1000ms
+// $('.square1').slideToggle(1000);
+// $('.square1').slideToggle('slow');
+
+$('.square1').slideToggle(1000,function(){
+   $('.square2,.square3').slideToggle(1500)
+ });
+});
+
+//------------------------------------------
+
+//Other Effects()
+
+     
+    //Animate()
+     //$('selector').animate(permeter)
+     //$('selector').animate(permeter,speed,callback)
+   //$('selector').slideToggle(permeter,speed,callback)
+
+  $('#anibtn').click(function(){
+
+//  $('.square1').animate({"height":"50%"});
+// $('.square1,.square3').animate({"height":"50%"},1000);
+// $('.box').even().animate({"height":"50%"},slow);
+// $('.box').odd().animate({"height":"50%"},slow);
+
+// 1s = 1000ms
+// $('.square1').animate({"height":"50%"},1000);
+// $('.square1').animate({"height":"50%"}'slow');
+
+$('.square1').animate({"height":"150px"},1000,function(){
+$('.square2,.square3').animate({"height":'100px'},1500)
+});
+
+});
+
+
+   //delay and queue
+    
+
+
+    $('#dlybtn').click(function(){
+
+    //    $(".square1").fadeOut(2000);
+    //    $(".square1").delay('slow').fadeOut();
+    //    $(".square1").delay('2000').fadeIn();
+
+    //    $(".square1").delay('fast').fadeOut();
+    //    $(".square2").delay('slow').fadeOut();
+    //    $(".square3").delay('1000').fadeOut();
+    //    $(".square4").delay('2000').fadeOut();
+    //    $(".square5").delay('3000').fadeOut();
+
+
+     //not working with css() method
+
+       var sql = $('.square1');
+       sql.animate({"height":100},"slow");
+       sql.animate({"height":200},"slow");
+       sql.animate({"height":200},"slow");
+       sql.animate({"height":300},"slow");
+       sql.animate({"height":300},"slow");
+       sql.animate({"height":150},"slow");
+      
+       console.log(sql.queue());
+       console.log(sql.queue().length);
+
+  });
+
+
+    //stop 
+
+    $('#clickmebtn').click(function(){
+
+       $('.square1').html("<i>I am ready to start now</i>").animate({"width":500},2000);
+       $('.square1').html("<i>Ohh, did you click stop btn</i>").animate({"width":100},1000);
+
+    });
+
+    //stop() & stop(true);
+
+    $('#stopbtn').click(function(){
+       $('.square1').stop();
+    });
+
+    $('#stoptruebtn').click(function(){
+       $('.square1').stop(true);
+    });
+
+    $('#finishbtn').click(function(){
+       $('.square1').finish();
+    });
+
+  
+     //Dequeue
+    $('#dqbtn').click(function(){
+     
+       var div5 = $('.square5');
+
+    //    div5.animate({"width":300,"height":300},"slow");
+    //    div5.animate({"width":300,"height":100},"slow");
+    //    div5.css("background","steelblue");
+
+    //    div5.animate({"width":300,"height":300},"slow");
+    //    div5.animate({"width":300,"height":100},"slow");
+    //    div5.queue(function(){
+    //        div5.css("background","steelblue");
+    //    });
+
+       div5.animate({"width":300,"height":300},"slow");
+       div5.animate({"width":300,"height":200},"slow");
+       div5.queue(function(){
+           div5.css("background","steelblue");
+           div5.dequeue();
+       });
+
+       div5.slideUp('slow');
+       div5.slideDown('slow');
+
+       console.log("Total Queue = " + div5.queue().length);
+
+
+    });
+
+    //ClearQueue
+    $('#cqbtn').click(function(){
+        // $('.square5').clearQueue();
+
+        $('.square1').clearQueue();
     });
 
 
