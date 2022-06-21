@@ -28,7 +28,7 @@
                 margin:0 10px;
             }
 
-            .square1,.square7{
+            .square1,.square7,.square13{
                 background-color:green;
             }
 
@@ -68,11 +68,23 @@
             <div class="box square10">10</div>
             <div class="box square11">11</div>
             <div class="box square12">12</div>
+            <div class="box square13">13</div>
         </div>
 
         <div class="control">
-            <button type="button" id="shakebtn">Button</button>
+            <button type="button" id="shakebtn">Shake</button>
             <button type="button" id="bouncebtn">Bounce</button>
+            <button type="button" id="blindbtn">Blind</button>
+            <button type="button" id="clipbtn">Clip</button>
+            <button type="button" id="dropbtn">Drop</button>
+            <button type="button" id="explodebtn">Explode</button>
+            <button type="button" id="fadebtn">Fade</button>
+            <button type="button" id="foldbtn">Fold</button>
+            <button type="button" id="highlightbtn">HighLight</button>
+            <button type="button" id="puffbtn">Puff</button>
+            <button type="button" id="pulsatebtn">Pulsate</button>
+            <button type="button" id="sizebtn">Size</button>
+            <button type="button" id="slidebtn">Slide</button>
         </div>
         
 
@@ -87,6 +99,8 @@
     <script type="text/javascript">
 
         $(document).ready(function(){
+
+            $('.box').hide();
             // console.log("hi");
 
             //effect()
@@ -99,28 +113,122 @@
                 //  $('.square1').effect("shake",2000);
                 //  $('.square1').effect("shake","slow");
 
-                $('.square1').effect("shake",{
-                    // "direction":"left"
-                    "direction":"right",
-                //    direction:"up"
-                    // direction:"down",
-                    times : 5,
-                    distance:200
-                },5000);
+                // $('.square1').effect("shake",{
+                //     // "direction":"left"
+                //     "direction":"right",
+                // //    direction:"up"
+                //     // direction:"down",
+                //     times : 5,
+                //     distance:200
+                // },5000);
+
+                // $('.square1').hide("explode","show");
+                $('.square1').toggle("shake",'slow');
+                // $('.square1').show("shake",'slow');
             });
 
             $('#bouncebtn').click(function(){
             //    $('.square2').effect('bounce','slow');
             // $('.square2').effect('bounce','fast');
 
-            $('.square2').effect("bounce",{
-                // "direction":"left",
-                // "direction":"right"
-                "direction":"up",
-                // "direction":"down",
-                "distance":"200"
-            },5000);
+            // $('.square2').effect("bounce",{
+            //     // "direction":"left",
+            //     // "direction":"right"
+            //     "direction":"up",
+            //     // "direction":"down",
+            //     "distance":"200"
+            // },5000);
+            $('.square2').show("bounce",'slow');
             });
+
+          
+               $('#blindbtn').click(function(){
+                // $('.square3').effect('blind',{
+                //     // direction:"right"
+                //     direction:"down"
+                // },'slow');
+                $('.square3').show("blind",'slow');
+               });
+
+
+               $('#clipbtn').click(function(){
+                // $('.square4').effect('clip','fast');
+                $('.square4').show("clip",'slow');
+               });
+
+               $('#dropbtn').click(function(){
+                // $('.square5').effect('drop',{
+                //     // direction:"up"
+                //     direction:"down"
+                // },'slow');
+                $('.square5').show("drop",'slow');
+               });
+
+               $('#explodebtn').click(function(){
+                // $('.square6').effect('explode','slow');
+
+                $('.square6').show("explode",'slow');
+               });
+
+
+               $('#fadebtn').click(function(){
+                // $('.square7').effect('fade','slow');
+                $('.square7').show("fade",'slow');
+               });
+
+
+               $('#foldbtn').click(function(){
+                // $('.square8').effect('fold','slow');
+
+                $('.square8').show("fold",'slow');
+               });
+
+               $('#highlightbtn').click(function(){
+                // $('.square9').effect('highlight','slow');
+                // $('.square9').effect('highlight',{
+                //     color:'coral'
+                // },'slow');
+
+                $('.square9').show("highlight",'slow');
+               });
+
+               $('#puffbtn').click(function(){
+                // $('.square10').effect('highlight','slow');
+                // $('.square10').effect('puff','slow');
+
+                $('.square10').show("puff",'slow');
+               });
+
+               $('#pulsatebtn').click(function(){
+                // $('.square11').effect('highlight','slow');
+                // $('.square11').effect('pulsate',{
+                //     times:10
+                // },'slow');
+
+                $('.square11').show("pulsate",'slow');
+               });
+
+               $('#sizebtn').click(function(){
+                // $('.square12').effect('highlight','slow');
+                // $('.square12').effect('size','slow');
+
+                $('.square12').show("size",'slow');
+               });
+
+               $('#slidebtn').click(function(){
+                // $('.square13').effect('highlight','slow');
+                // $('.square13').effect('slide',{
+                //     // direction:"down"
+                //     direction:"up"
+                // },'slow');
+
+                $('.square13').show("slide",'slow');
+               });
+
+              
+
+             
+          
 
 
 
