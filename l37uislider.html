@@ -46,6 +46,16 @@
          <label for="myslider">Amout</label>
          <div id="myslider"></div>
         </div>
+
+        <div class="form-group">
+          <label for="days">Days :</label>
+          <input type="text" name="days" id="days" class="form-control" readonly />
+         </div>
+
+         <div class="form-group">
+          <label for="term">Term</label>
+          <div id="term"></div>
+         </div>
      </form>
     </div>
         
@@ -64,6 +74,7 @@
 
     $("#myslider").slider({
         slide:function(e,ui){
+          console.log(e);
             // console.log(e.target);
             // console.log(ui);
             // console.log(ul.vlaue);
@@ -73,8 +84,53 @@
         min:10,
         max:200,
         // value:100,
-        step:20
+        step:10,
+
+        orientation:"vertical",
+
+        change:function(e,jqui){
+          console.log("This is change = " ,jqui.value);
+        },
+
+        start:function(e,jqui){
+          console.log("This is start = " ,jqui.value);
+        },
+
+        stop:function(e,jqui){
+          console.log("This is stop = " ,jqui.value);
+        }
+
+    }).css("background","steelblue");
+
+
+    // $('#myslider > span').css({
+    //   "background-color":"darkorange",
+    //   "height":"40px",
+    //   "width":"5px",
+    //   "top":"-13px",
+    //   "left":"4px"  
+    // });
+
+    $('#myslider').children('span').css("background","violet");
+
+
+    $('#term').css("background-color","steelblue").slider({
+      slide:function(e,jqui){
+        // console.log(e);
+        // console.log(jqui.value);
+        $("#days").val("From " + jqui.values[0] + " Days to " + jqui.values[1] + " Days"); //array nt lr
+      },
+      min:7,
+      max:30,
+      step:1,
+      values:[10,20],
+      range:true
     });
+
+    $('#term').children("span:nth-of-type(1)").css("background","yellow");
+    $('#term').children("span:nth-of-type(2)").css("background","orange");
+
+    $("#term > div").css("background","skyblue");
       
 
     });
